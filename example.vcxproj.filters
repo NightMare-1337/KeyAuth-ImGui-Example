@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="others\ImGui\imgui.cpp" />
+    <ClCompile Include="others\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="others\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="others\ImGui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="others\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="others\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="others\ImGui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="api">
+      <UniqueIdentifier>{d9cee197-056b-42cf-90d9-e2e20d8ad45d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="api\KeyAuth.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="xorstr.hpp" />
+    <ClInclude Include="others\ImGui\imconfig.h" />
+    <ClInclude Include="others\ImGui\imgui.h" />
+    <ClInclude Include="others\ImGui\imgui_impl_dx9.h" />
+    <ClInclude Include="others\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="others\ImGui\imgui_internal.h" />
+    <ClInclude Include="others\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="others\ImGui\imstb_textedit.h" />
+    <ClInclude Include="others\ImGui\imstb_truetype.h" />
+  </ItemGroup>
+</Project>
