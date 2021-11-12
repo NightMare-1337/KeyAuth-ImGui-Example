@@ -30,9 +30,9 @@ using namespace KeyAuth;
 *
 */
 
-std::string name = XorStr("LolysAA");
-std::string ownerid = XorStr("bjuMkZFmdZ");
-std::string secret = XorStr("fc3220dde87f448745a4d39e36bd55a715cb03af072e5d62e4195974911bf9ab");
+std::string name = XorStr("");
+std::string ownerid = XorStr("");
+std::string secret = XorStr("");
 std::string version = XorStr("1.0");
 
 api KeyAuthApp(name, ownerid, secret, version);
@@ -91,26 +91,16 @@ void ResetDevice()
 	ImGui_ImplDX9_CreateDeviceObjects();
 }
 
-static std::string random_string(int length)
-{
-	std::string str("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-	std::random_device rd;
-	std::mt19937 generator(rd());
-	std::shuffle(str.begin(), str.end(), generator);
-	return str.substr(0, length);    // assumes 32 < number of characters in str         
-}
-static DWORDLONG random_number(DWORDLONG min, DWORDLONG max)		
-{
-	srand(time(0));
-	DWORDLONG out = min + rand() % (max - min + 1);
-	return out;
-}
-static std::string randomclassname = random_string(random_number(4, 16));
-
 bool LoginCheck = false;
 
 void InfLog()
 {
+	RECT screen_rect;
+	GetWindowRect(GetDesktopWindow(), &screen_rect);
+	auto x = float(screen_rect.right - width) / 2.f;
+	auto y = float(screen_rect.bottom - height) / 2.f;
+
+	ImGui::SetNextWindowPos(ImVec2(x, y), ImGuiCond_Once);
 	ImGui::SetNextWindowSize(ImVec2(200, 70));
 	ImGui::Begin("User Information", &loader_active, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoScrollbar);
 	{
@@ -139,7 +129,7 @@ void InfLog()
 
 int APIENTRY WindownsMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
-	WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, L"Loaders", NULL };
+	WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL,L"Loaders", NULL };
 	RegisterClassEx(&wc);
 	main_hwnd = CreateWindow(wc.lpszClassName, L"Loaders", WS_POPUP, 0, 0, 5, 5, NULL, NULL, wc.hInstance, NULL);
 
