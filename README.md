@@ -16,3 +16,5 @@ Feel free to join https://keyauth.com/discord/ if you have questions or suggesti
 
 2022-2-19 Fixed KeyAuth Url      
 Thank you wnelson03!
+
+2022-2-20 Supports the latest KeyAuth Update
