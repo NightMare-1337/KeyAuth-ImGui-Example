@@ -3,8 +3,6 @@ KeyAuth ImGui Example
 
 - Download Repository
 - Download the DirectX SDK.
-- https://github.com/KeyAuth/KeyAuth-CPP-Example  Download libs.zip from this repository
-- Extract libs.zip so that there is a libs folder in your project. then you may delete libs.zip
 
 Then you're ready to compile!
 
