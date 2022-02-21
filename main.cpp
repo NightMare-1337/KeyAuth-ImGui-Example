@@ -293,7 +293,13 @@ int APIENTRY WindownsMain(HINSTANCE, HINSTANCE, LPSTR, int)
 					if (ImGui::Button("Login##Log", ImVec2(320, 25)))
 					{
 						KeyAuthApp.login(UserName, PassWord);
-
+						
+						if (!KeyAuthApp.data.success)
+						{
+							MessageBox(NULL, TEXT("Login Error!"), TEXT("Login"), MB_OK);
+							exit(0);
+						}
+						
 						MessageBox(NULL, TEXT("Login successful!"), TEXT("Login"), MB_OK);
 
 						InfWindow = true;
