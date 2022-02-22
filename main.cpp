@@ -127,13 +127,10 @@ int APIENTRY WindownsMain(HINSTANCE, HINSTANCE, LPSTR, int)
 	ShowWindow(main_hwnd, SW_HIDE);
 	UpdateWindow(main_hwnd);
 
-	 void hideStartupConsoleOnce();
-    {
         HWND Stealth;
         AllocConsole();
         Stealth = FindWindowA("ConsoleWindowClass", NULL);
         ShowWindow(Stealth, 0);
-    }
 	
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO();
