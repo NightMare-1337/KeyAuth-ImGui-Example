@@ -3,6 +3,7 @@ KeyAuth ImGui Example
 
 - Download Repository
 - Download the DirectX SDK.
+- Download Visual studio 2019(V142 build tools)
 
 Then you're ready to compile!
 
