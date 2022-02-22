@@ -18,3 +18,6 @@ Thank you wnelson03!
 2022-2-20 Supports the latest KeyAuth Update
 
 2022-2-21 Added login error handling
+
+2022-2-22 added hide console(By default, the console is not executed, but by executing it once and hiding the console, the subsequent processing on the console will be invisible.)
+thank you lucentss!
